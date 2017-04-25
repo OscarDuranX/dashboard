@@ -11,6 +11,7 @@
 
             <dashboard-small-box name="tasks"></dashboard-small-box>
 
+            <dashboard-small-box name="threat"></dashboard-small-box>
 
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-green">
