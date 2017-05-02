@@ -15,6 +15,8 @@ class DashboardController extends Controller
     public function index()
     {
         $data = [];
+        $data['labels1'] = "['Gener', 'Febrer','Març']";
+        $data['values1'] = "[25,50,5]";
         return view('dashboard',$data);
     }
 
@@ -31,6 +33,11 @@ class DashboardController extends Controller
     public function createRandomTask()
     {
         factory(\App\Task::class)->states('user')->create();
+    }
+
+    public function createRandomThread()
+    {
+        factory(\App\Thread::class)->create();
     }
 
 }
