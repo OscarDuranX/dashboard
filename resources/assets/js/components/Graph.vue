@@ -1,12 +1,17 @@
 <template>
-    <canvas id="graph"></canvas>
-    {{ legend }}
+    <div>
+        <canvas ref="canvas"></canvas>
+        <div v-html="legend"></div>
+    </div>
 </template>
 
 <script>
     import Chart from 'chart.js'
     export default {
         props: {
+            url: {
+                type: String
+            },
             larabel: {
                 type: Array
             },

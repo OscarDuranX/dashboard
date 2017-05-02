@@ -27,6 +27,10 @@ class DashboardController extends Controller
 
     public function tasksNumber()
     {
+//        return Task::all()->count();
+        $value = Cache::get('tasksNumber', function (){
+           return DB::table()->get();
+        });
         return Task::all()->count();
     }
 
@@ -38,6 +42,15 @@ class DashboardController extends Controller
     public function createRandomThread()
     {
         factory(\App\Thread::class)->create();
+    }
+
+    public function graph1()
+    {
+        $data = [];
+        $data['labels']= ['January', 'February', 'March', 'April', 'May'];
+        $data['values']= [45,56,43,23,12];
+        return $data;
+
     }
 
 }

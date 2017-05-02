@@ -30,5 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('create/random/task', 'DashboardController@createRandomTask')->name('createRandomTask');
 
-    Route::get('deshboard/graphs/1', 'DashboardController@index')->name('createRandomTask');
+
 });
+
+Route::get('deshboard/graphs/1', 'DashboardController@graph1');

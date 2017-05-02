@@ -227,12 +227,17 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <graph
-                    :labels="['January','February','March']"
-                    :values="['15','30','10']"
-                >
-                </graph>
+                        :labels="{{$labels1}}"
+                        :values="{{$values1}}"
+                ></graph>
+            </div>
+            <div class="col-lg-6">
+                <graph
+                        :labels="['Gener', 'Febrer','Març']"
+                        :values="[5,5,10]"
+                ></graph>
             </div>
         </div>
 
