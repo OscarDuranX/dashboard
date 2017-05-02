@@ -23398,7 +23398,7 @@ window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue2_filters___default.a);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_echo___default.a, {
   broadcaster: 'pusher',
-  key: '06d5f8319089048cd234',
+  key: '0eedba39b63461b8aabd',
   cluster: 'eu',
   encrypted: true
 });
@@ -24902,7 +24902,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     increase: function increase() {
-      console.log('Increase being executed!');
+      console.log('Increase being executed!' + this.name);
       axios.get('/create/random/' + this.name).then(function (response) {
         console.log(response.data);
       }).catch(function (error) {
@@ -24963,7 +24963,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     console.log('Component smallbox mounted.');
     console.log(this.eventName());
     this.$echo.channel('dashboard').listen(this.eventName(), function (payload) {
-      console.log('Event received!!!!!!!!!');
+      console.log('Event received!!!!!!!!!' + _this.eventName());
       console.log(payload);
       _this.value++;
     });
@@ -25058,7 +25058,7 @@ window.Pusher = __webpack_require__(61);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'pusher',
-  key: '06d5f8319089048cd234',
+  key: '0eedba39b63461b8aabd',
   cluster: 'eu',
   encrypted: true
 });

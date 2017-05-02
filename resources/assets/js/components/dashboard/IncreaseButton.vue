@@ -15,7 +15,7 @@
         },
         methods: {
             increase () {
-                console.log('Increase being executed!')
+                console.log('Increase being executed!'+ this.name)
                 axios.get('/create/random/' + this.name )
                   .then(function (response) {
                     console.log(response.data)

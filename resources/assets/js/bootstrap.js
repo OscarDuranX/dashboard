@@ -15,7 +15,6 @@ require('bootstrap-less')
 require('admin-lte')
 window.toastr = require('toastr')
 require('icheck')
-
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
  * using reactive data binding and reusable components. Vue's API is clean
@@ -50,6 +49,7 @@ Vue.component('reset-password-form', require('./components/auth/ResetPasswordFor
 
 Vue.component('dashboard-small-box', require('./components/dashboard/SmallBox.vue'))
 Vue.component('dashboard-increase-button', require('./components/dashboard/IncreaseButton.vue'))
+Vue.component('graph', require('./components/Graph.vue'))
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -63,7 +63,7 @@ window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: '06d5f8319089048cd234',
+    key: '0eedba39b63461b8aabd',
     cluster: 'eu',
     encrypted: true
 });

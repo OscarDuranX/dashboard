@@ -37,7 +37,7 @@
             console.log('Component smallbox mounted.')
             console.log(this.eventName())
             this.$echo.channel('dashboard').listen(this.eventName(), (payload) => {
-              console.log('Event received!!!!!!!!!')
+              console.log('Event received!!!!!!!!!' + this.eventName())
               console.log(payload);
               this.value++
             });
