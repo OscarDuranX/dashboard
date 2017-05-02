@@ -228,7 +228,11 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <graph></graph>
+                <graph
+                    :labels="['January','February','March']"
+                    :values="['15','30','10']"
+                >
+                </graph>
             </div>
         </div>
 
