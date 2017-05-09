@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Activity;
 use App\Task;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,7 @@ class DashboardController extends Controller
 
     public function createRandomThread()
     {
-        factory(\App\Thread::class)->create();
+        factory(\App\Thread::class)->states('user')->create();
     }
 
     public function graph1()
@@ -51,6 +52,11 @@ class DashboardController extends Controller
         $data['values']= [45,56,43,23,12];
         return $data;
 
+    }
+
+    public function fetchActivityFeed()
+    {
+        return Activity::all();
     }
 
 }

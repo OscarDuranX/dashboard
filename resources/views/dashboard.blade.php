@@ -244,7 +244,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- The time line -->
-                <activity-feat></activity-feat>
+                <activity-feed></activity-feed>
             </div>
             <!-- /.col -->
         </div>

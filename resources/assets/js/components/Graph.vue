@@ -8,24 +8,15 @@
 <script>
     import Chart from 'chart.js'
     export default {
-        props: {
-            url: {
-                type: String
-            },
-            larabel: {
-                type: Array
-            },
-            values: {
-                type: Array
+        data() {
+            return {
+                legend:''
             }
         },
+        props: ['labels','values'],
         mounted() {
-            fetch(this.url, {
-                method: 'get'
-            }).then()
-            })
             console.log('Component mounted.')
-            var data = {
+            let data = {
                 labels: this.labels,
                 datasets: [
                     {
@@ -33,13 +24,13 @@
                     }
                 ]
             }
-            var context = document.querySelector('#graph').getContext('2d')
-            let chart=new Chart(context,{
+            console.log(this)
+            let context = this.$refs.canvas.getContext('2d')
+            let chart = new Chart(context,{
                 type: "bar",
                 data: data,
             })
             this.legend = chart.generateLegend()
-        },
-
+        }
     }
 </script>

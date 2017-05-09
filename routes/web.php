@@ -24,13 +24,15 @@ Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
+
     Route::get('tasks', 'DashboardController@tasks')->name('tasks');
 
     Route::get('dashboard/tasks/number', 'DashboardController@tasksNumber')->name('tasks-number');
 
     Route::get('create/random/task', 'DashboardController@createRandomTask')->name('createRandomTask');
+    Route::get('create/random/thread', 'DashboardController@createRandomThread');
 
-
+    Route::get('activity-feed', 'DashboardController@fetchActivityFeed');
 });
 
 Route::get('deshboard/graphs/1', 'DashboardController@graph1');

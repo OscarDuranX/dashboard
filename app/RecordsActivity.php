@@ -26,7 +26,7 @@ trait RecordsActivity
      */
     protected static function getActivitiesToRecord()
     {
-        return ['created'];
+        return ['created','updated','deleted'];
     }
 
     /**
@@ -62,6 +62,17 @@ trait RecordsActivity
     {
         $type = strtolower((new \ReflectionClass($this))->getShortName());
 
+        return "{$event}_{$type}";
+    }
+    /**
+     * Determine the activity type.
+     *
+     * @param  string $event
+     * @return string
+     */
+    protected function getTitle($event)
+    {
+        $type = strtolower((new \ReflectionClass($this))->getShortName());
         return "{$event}_{$type}";
     }
 }
